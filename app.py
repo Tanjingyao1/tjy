@@ -2,9 +2,7 @@
 import streamlit as st
 from openai import OpenAI
 
-# ===================== 配置你的 API Key =====================
-API_KEY = "sk-d085b6fcd4214f24a9aa1125bb6e849b"
-# ============================================================
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"], base_url="https://api.deepseek.com")
 
 st.set_page_config(page_title="MEA积极认知助手", page_icon="🐘", layout="wide")
 
